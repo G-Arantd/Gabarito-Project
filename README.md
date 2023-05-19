@@ -1,6 +1,6 @@
 # Gabarito-Project
 
-    ##Ideias:
+##Ideias:
 
     -3 modelos de gabarito padrão
     -No PC a pessoa realiza um upload da foto

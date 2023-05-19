@@ -1,6 +1,6 @@
 # Gabarito-Project
 
-##Ideias:
+    ##Ideias:
 
 -3 modelos de gabarito padrão
 -No PC a pessoa realiza um upload da foto
@@ -12,31 +12,31 @@
 -Selecionar a quantidade de questões
 -Após ler o gabarito o aplicativo/site vai criar uma tabela no Excel, com o nome do aluno e a nota
 
-##Lista de Tarefas
-###Desenvolvimento de Back-end:
-    -Linguagem Utilizada: Python
-    -Scanner de Gabarito & QRCode no Desktop/Mobile
-    -Conexão a um Banco de Dados
+    ##Lista de Tarefas
+        ###Desenvolvimento de Back-end:
+            -Linguagem Utilizada: Python
+            -Scanner de Gabarito & QRCode no Desktop/Mobile
+            -Conexão a um Banco de Dados
 
-###Desenvolvimento de Front-end:
-    -Linguagem Utilizada: React
-    -Layout no Figma
+        ###Desenvolvimento de Front-end:
+            -Linguagem Utilizada: React
+            -Layout no Figma
 
-###Extras:
-    -Tripe de Impressora 3D
+        ###Extras:
+            -Tripe de Impressora 3D
  
 
-##Distribuição de tarefas
- ###Gabriel:
-    -Backend
-    -Conexão de banco de dados
-    -Tripé Impressora 3D
+    ##Distribuição de tarefas
+     ###Gabriel:
+        -Backend
+        -Conexão de banco de dados
+        -Tripé Impressora 3D
     
- ###Gabriela:
-    -Frontend
-    -Layout Figma - Desktop
+     ###Gabriela:
+        -Frontend
+        -Layout Figma - Desktop
 
- ###Laysa:    
-    -Frontend
-    -Layout Figma - Mobile
-    -Tripé Impressora 3D
+     ###Laysa:    
+        -Frontend
+        -Layout Figma - Mobile
+        -Tripé Impressora 3D

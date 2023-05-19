@@ -2,15 +2,15 @@
 
     ##Ideias:
 
-3 modelos de gabarito padrão
-No PC a pessoa realiza um upload da foto
-Na versão mobile o professor utiliza a própria câmera do celular para ler a prova
-O scanner vai ler o QR do RA e vai lançar a nota no banco de dados
-Pontuação da questão
-O professor coloca a sequência correta do gabarito antes de começar a ler o gabarito da provas
-Aplicativo/Site não deve salvar as respostas das provas
-Selecionar a quantidade de questões
-Após ler o gabarito o aplicativo/site vai criar uma tabela no Excel, com o nome do aluno e a nota
+    -3 modelos de gabarito padrão
+    -No PC a pessoa realiza um upload da foto
+    -Na versão mobile o professor utiliza a própria câmera do celular para ler a prova
+    -O scanner vai ler o QR do RA e vai lançar a nota no banco de dados
+    -Pontuação da questão
+    -O professor coloca a sequência correta do gabarito antes de começar a ler o gabarito da provas
+    -Aplicativo/Site não deve salvar as respostas das provas
+    -Selecionar a quantidade de questões
+    -Após ler o gabarito o aplicativo/site vai criar uma tabela no Excel, com o nome do aluno e a nota
 
 ## Lista de Tarefas
 ### Desenvolvimento de Back-end:

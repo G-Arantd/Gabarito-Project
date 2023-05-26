@@ -1,35 +1,35 @@
-import cv2
-import numpy as np
+from PIL import Image, ImageEnhance
 
-def ajustar_contraste(imagem, nivel_contraste):
-    # Converter a imagem para o formato HSV
-    imagem_hsv = cv2.cvtColor(imagem, cv2.COLOR_BGR2HSV)
+def ajustar_brilho_contraste(imagem, nivel_brilho, nivel_contraste):
+    # Abrir a imagem utilizando a PIL
+    imagem_pil = Image.open(imagem)
 
-    # Aumentar o contraste no canal de valor (V)
-    imagem_hsv[:,:,2] += nivel_contraste
+    # Converter a imagem para escala de cinza
+    imagem_pil = imagem_pil.convert("L")
 
-    # Limitar os valores do canal de valor (V) entre 0 e 255
-    imagem_hsv[:,:,2] = np.clip(imagem_hsv[:,:,2], 0, 255)
+    # Criar um objeto de melhoria da imagem
+    melhoria_imagem = ImageEnhance.Brightness(imagem_pil)
 
-    # Converter a imagem de volta para o formato BGR
-    nova_imagem = cv2.cvtColor(imagem_hsv, cv2.COLOR_HSV2BGR)
+    # Ajustar o brilho
+    imagem_brilho = melhoria_imagem.enhance(nivel_brilho)
 
-    return nova_imagem
+    # Criar um objeto de melhoria do contraste
+    melhoria_contraste = ImageEnhance.Contrast(imagem_brilho)
+
+    # Ajustar o contraste
+    imagem_ajustada = melhoria_contraste.enhance(nivel_contraste)
+
+    return imagem_ajustada
 
 # Carregar a imagem
-imagem_original = cv2.imread('testgabarito.jpg')
+imagem_original = 'Image/testgabarito.jpg'
 
-# Ajustar o contraste
-nivel_contraste = 50
-imagem_contraste = ajustar_contraste(imagem_original, nivel_contraste)
+# Ajustar o brilho e contraste
+nivel_brilho = 1.5  # Valor maior que 1 aumenta o brilho, valor menor que 1 diminui o brilho
+nivel_contraste = 3.5  # Valor maior que 1 aumenta o contraste, valor menor que 1 diminui o contraste
+imagem_ajustada = ajustar_brilho_contraste(imagem_original, nivel_brilho, nivel_contraste)
 
-# Redimensionar a imagem para exibição
-largura_desejada = 800
-proporcao = largura_desejada / imagem_contraste.shape[1]
-altura_desejada = int(imagem_contraste.shape[0] * proporcao)
-imagem_redimensionada = cv2.resize(imagem_contraste, (largura_desejada, altura_desejada))
+# Salvar a imagem com o nome específico
+imagem_ajustada.save('Image/testgabarito_ajustada.jpg')
 
-# Exibir a imagem redimensionada
-cv2.imshow('Imagem com Contraste', imagem_redimensionada)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+print("Imagem salva com sucesso.")

@@ -59,4 +59,4 @@ def readAnswerSheet(pathImage, numAnswer, correctAnswers, valueAnswers):
 
     return student, nota
 
-print (readAnswerSheet("testgabarito3.jpg", 11, ["B","D","B","A","C","A","C","D","B","C"], [1,1,1,1,1,1,1,1,1,1]))
+print (readAnswerSheet("Image/testgabarito_ajustada.jpg", 11, ["B","D","B","A","C","A","C","D","B","C"], [1,1,1,1,1,1,1,1,1,1]))

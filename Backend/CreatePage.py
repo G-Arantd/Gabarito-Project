@@ -4,23 +4,23 @@ import qrcode
 widthA4 = 2480
 heightA4 = 3508
 
-imageWidth = 654
+imageWidth = 327
 imageHeight = 184
 
-pathImage = Image.open("./Gabarito-Project/Backend/Gabarito.jpg")
+pathImage = Image.open("Gabarito.jpg")
 
 mainImage = Image.new("RGB", (widthA4, heightA4), "white")
 
-repeat = 10
+repeat = 15
 
 for i in range(0, repeat):
     x_pos = int((widthA4 / 2) - int(imageWidth / 2) + 1)
-    y_pos = int(heightA4 / 2.5) + int(190 * i)
+    y_pos = int(heightA4 / 1.85) + int(95 * i)
     mainImage.paste(pathImage, (x_pos, y_pos))
 
-qrSize = 350
+qrSize = 450
 qrXpos = (int(widthA4 / 2) - int(qrSize / 2))
-qrYpos = int(heightA4/2)-750
+qrYpos = int(heightA4/1.60)-750
 
 qr_content = "2022013990"
 aluno = "Gabriel Arantd Felipe"
@@ -32,7 +32,7 @@ qrcode_img = qr.make_image(fill_color="black", back_color="white").resize((qrSiz
 
 mainImage.paste(qrcode_img, (qrXpos, qrYpos))
 
-pathLogo = Image.open("./Gabarito-Project/Backend/Logo.png")
+pathLogo = Image.open("Logo.png")
 
 heightLogo = 536
 widthLogo = 960
@@ -63,4 +63,4 @@ draw = ImageDraw.Draw(mainImage)
 draw.text((raX, raY), raText, font=raFont, fill="black")
 
 
-mainImage.save("./Gabarito-Project/Backend/imageTest.png")
+mainImage.save("imageTest2.png")
